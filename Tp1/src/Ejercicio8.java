@@ -6,21 +6,17 @@ import java.util.Scanner;
 
 public class Ejercicio8 {
 
-    private static Scanner input;
-
     public static void main(String[] args) {
-        input = new Scanner(System.in);
 
         String[] dias = {"Domingo", "Lunes", "Martes", "Miercoles","Jueves","Viernes", "Sabado"};
 
-        int numDia = GetNumber(input);
+        int numDia = GetNumber();
 
         System.out.println(String.format("El día número %s corresponde al %s", numDia, dias[numDia - 1]));
-
-        input.close();
     }
 
-    private static int GetNumber(Scanner input) {
+    private static int GetNumber() {
+        Scanner input = new Scanner(System.in);
         Integer num = null;
 
         do
@@ -46,8 +42,9 @@ public class Ejercicio8 {
 
         } while(num == null);
 
-        return num;
+        input.close();
 
+        return num;
     }
 }
 

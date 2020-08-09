@@ -3,10 +3,8 @@ import java.util.Scanner;
 
 public class Ejercicio4 {
 
-    private static Scanner input;
-
     public static void main(String[] args) {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         int num1 = GetNumber(input);
         int num2 = GetNumber(input);

@@ -5,10 +5,8 @@ import java.util.Scanner;
 
 public class Ejercicio6 {
 
-    private static Scanner input;
-
     public static void main(String[] args) {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         int num = GetNumber(input);
 
