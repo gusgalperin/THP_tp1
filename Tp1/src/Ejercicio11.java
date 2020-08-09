@@ -19,7 +19,7 @@ public class Ejercicio11 {
         System.out.println(String.format("Fecha de Compra: %s", fechaCompra));
         System.out.println(String.format("Nombre del Comprador:  %s", nombreComprador));
         System.out.println(String.format("Producto solicitado: %s", nombreProducto));
-        System.out.println(String.format("Cantidad solicitada: %s", cantidad));2020
+        System.out.println(String.format("Cantidad solicitada: %s", cantidad));
         System.out.println(String.format("Precio Unitario: $%s", precio));
         System.out.println(String.format("Total a Pagar:  $%s", cantidad * precio));
     }
