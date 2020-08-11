@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 public class Ejercicio10 {
 
-    private static final int HORA_APERTURA = 10;
-    private static final int HORA_CIERRE = 18;
-
     public static void main(String[] args) {
+        final int HORA_APERTURA = 10;
+        final int HORA_CIERRE = 18;
+
         int horaIngresada = GetHora();
 
         System.out.println(String.format(

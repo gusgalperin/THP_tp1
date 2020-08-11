@@ -2,15 +2,15 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio13 {
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
         final double valorHoraSimple = 16;
         final double valorHoraExtra = 20;
         final int cantidadHorasBaseSemanal = 40;
 
-        int horasTrabajadas = GetIntInput(scanner, "Ingrese cantidad de horas trabajas", 0);
+        int horasTrabajadas = GetIntInput("Ingrese cantidad de horas trabajas", 0);
 
         int horasExtra = horasTrabajadas - cantidadHorasBaseSemanal;
 
@@ -30,7 +30,7 @@ public class Ejercicio13 {
         scanner.close();
     }
 
-    private static int GetIntInput(Scanner scanner, String mensaje, int greaterThan){
+    private static int GetIntInput(String mensaje, int greaterThan){
         Integer num = null;
 
         do

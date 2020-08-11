@@ -2,15 +2,15 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio14 {
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(System.in);
 
-        char operacion = GetOperacion(scanner);
+        char operacion = GetOperacion();
 
         while (operacion != 'e'){
-            int primerNumero = GetIntInput(scanner, "Ingrese primer número", null);
-            int segundoNumero = GetIntInput(scanner, "Ingrese segundo numero", operacion == 'd' ? 0 : null);
+            int primerNumero = GetIntInput("Ingrese primer número", null);
+            int segundoNumero = GetIntInput("Ingrese segundo numero", operacion == 'd' ? 0 : null);
 
             switch (operacion){
                 case 's':
@@ -29,13 +29,13 @@ public class Ejercicio14 {
                     throw new Exception("operación inválida: " + operacion);
             }
 
-            operacion = GetOperacion(scanner);
+            operacion = GetOperacion();
         }
 
         scanner.close();
     }
 
-    private static char GetOperacion(Scanner scanner){
+    private static char GetOperacion(){
         char operacion = 'n';
 
         do
@@ -55,7 +55,7 @@ public class Ejercicio14 {
         return op == 's' || op == 'r' || op == 'p' || op == 'd' || op == 'e';
     }
 
-    private static int GetIntInput(Scanner scanner, String mensaje, Integer notEqual){
+    private static int GetIntInput(String mensaje, Integer notEqual){
         Integer num = null;
 
         do

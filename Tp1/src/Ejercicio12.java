@@ -2,9 +2,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio12 {
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
         final int cantidadDados = 3;
         int cantidadDeSeis = 0;
@@ -12,7 +12,7 @@ public class Ejercicio12 {
         int[] dados = new int[cantidadDados];
 
         for (int i = 0; i < cantidadDados; i++) {
-            dados[i] = GetIntInput(scanner, String.format("Dado %s: ", i+1), 1, 6);
+            dados[i] = GetIntInput(String.format("Dado %s: ", i+1), 1, 6);
 
             if(dados[i] == 6)
                 cantidadDeSeis++;
@@ -35,7 +35,7 @@ public class Ejercicio12 {
         }
     }
 
-    private static int GetIntInput(Scanner scanner, String mensaje, int greaterThan, int lessThan){
+    private static int GetIntInput(String mensaje, int greaterThan, int lessThan){
         Integer num = null;
 
         do

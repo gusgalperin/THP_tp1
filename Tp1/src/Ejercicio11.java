@@ -4,15 +4,15 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio11 {
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        String fechaCompra = GetStringInput(scanner, "Ingrese fecha de compra (YYYYMMDD)");
-        String nombreComprador = GetStringInput(scanner, "Ingrese nombre del comprador");
-        String nombreProducto = GetStringInput(scanner, "Ingrese nombre del producto");
-        int cantidad = GetIntInput(scanner, "Ingrese cantidad", 0);
-        double precio = GetDoubleInput(scanner, "Ingrese precio", 0);
+        String fechaCompra = GetStringInput("Ingrese fecha de compra (YYYYMMDD)");
+        String nombreComprador = GetStringInput("Ingrese nombre del comprador");
+        String nombreProducto = GetStringInput("Ingrese nombre del producto");
+        int cantidad = GetIntInput("Ingrese cantidad", 0);
+        double precio = GetDoubleInput("Ingrese precio", 0);
 
         scanner.close();
 
@@ -24,7 +24,7 @@ public class Ejercicio11 {
         System.out.println(String.format("Total a Pagar:  $%s", cantidad * precio));
     }
 
-    private static String GetStringInput(Scanner scanner, String mensaje) {
+    private static String GetStringInput(String mensaje) {
         String input = "";
 
         do
@@ -38,7 +38,7 @@ public class Ejercicio11 {
         return input;
     }
 
-    private static int GetIntInput(Scanner scanner, String mensaje, int greaterThan){
+    private static int GetIntInput(String mensaje, int greaterThan){
         Integer num = null;
 
         do
@@ -59,7 +59,7 @@ public class Ejercicio11 {
         return num;
     }
 
-    private static double GetDoubleInput(Scanner scanner, String mensaje, double greaterThan){
+    private static double GetDoubleInput(String mensaje, double greaterThan){
         Double num = null;
 
         do

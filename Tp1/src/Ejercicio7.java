@@ -4,11 +4,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio7 {
+    private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        int[] numeros = GetNumbers(input, 3);
+        int[] numeros = GetNumbers(3);
 
         if(numeros[0] > numeros[1] && numeros[0] > numeros[2])
             MostrarMayor(numeros[0]);
@@ -22,7 +22,7 @@ public class Ejercicio7 {
         input.close();
     }
 
-    private static int[] GetNumbers(Scanner input, int count) {
+    private static int[] GetNumbers(int count) {
         int[] arr = new int[count];
 
         Integer num = null;

@@ -4,12 +4,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio5 {
+    private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        int num1 = GetNumber(input, true);
-        int num2 = GetNumber(input, false);
+        int num1 = GetNumber(true);
+        int num2 = GetNumber(false);
 
         double resultado = (double)num1 / num2;
 
@@ -18,7 +18,7 @@ public class Ejercicio5 {
         input.close();
     }
 
-    private static int GetNumber(Scanner input, boolean aceptarCero) {
+    private static int GetNumber(boolean aceptarCero) {
         Integer num = null;
 
         do

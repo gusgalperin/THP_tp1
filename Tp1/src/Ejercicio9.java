@@ -5,14 +5,14 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio9 {
+    private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
         int cantidad = 3;
 
-        String[] nombres = GetNombresAportantes(input, cantidad);
-        Double[] montos = GetMontos(input, nombres);
+        String[] nombres = GetNombresAportantes(cantidad);
+        Double[] montos = GetMontos(nombres);
 
         Double total = montos[0] + montos[1] + montos[2];
 
@@ -23,7 +23,7 @@ public class Ejercicio9 {
         input.close();
     }
 
-    private static String[] GetNombresAportantes(Scanner input, int cant){
+    private static String[] GetNombresAportantes(int cant){
         String[] arr = new String[cant];
 
         for (int i = 0; i < cant; i++) {
@@ -40,7 +40,7 @@ public class Ejercicio9 {
         return arr;
     }
 
-    private static Double[] GetMontos(Scanner input, String[] nombres) {
+    private static Double[] GetMontos(String[] nombres) {
         Double[] montos = new Double[nombres.length];
 
         for (int i = 0; i < nombres.length; i++) {
